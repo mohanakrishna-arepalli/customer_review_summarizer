@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@google-ai/generativelanguage": "^2.8.0",
+    "@google-cloud/aiplatform": "^3.34.0",
+    "@google-cloud/vertexai": "^1.9.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "faiss-node": "^0.5.1",
+    "google-auth-library": "^9.15.0"
+  },
+  "name": "amazon-review-project",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "directories": {
+    "doc": "docs"
+  },
+  "devDependencies": {},
+  "description": ""
+}

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weird Wolf Heavy Duty Mosquito Racket Bat</title>
+    <style>
+      body {
+        background-image: url("images/ind.jpg");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 50px;
+      }
+
+      .product-page {
+        display: flex;
+        width: 1000px;
+        justify-content: space-between;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .image-slider {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        background-color: #f4f4f4;
+        position: relative;
+      }
+
+      .slider-container {
+        position: relative;
+        width: 100%;
+      }
+
+      .image-slider img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+      }
+
+      .product-info {
+        width: 50%;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      .product-title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 15px;
+      }
+
+      .product-description {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .description-title {
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Navigation Buttons */
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 30px;
+        color: #333;
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      /* Optional: Styling for the hover effect */
+      .image-slider img:hover {
+        transform: scale(1.05);
+      }
+
+      /* For mobile responsiveness */
+      @media (max-width: 768px) {
+        .product-page {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .image-slider,
+        .product-info {
+          width: 100%;
+        }
+      }
+      /* Button and result container styles */
+      .summarize-container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+      }
+
+      .summarize-button {
+        background-color: #4caf50;
+        color: white;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .summarize-button:hover {
+        background-color: #45a049;
+      }
+
+      .summary-output {
+        margin-top: 15px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        width: 80%;
+        border: 1px solid #ddd;
+        min-height: 100px;
+        color: #333;
+        white-space: pre-line; /* Ensures newlines from the summary are preserved */
+      }
+      .summary-output b {
+        font-weight: bold;
+        color: #333;
+      }
+
+      .summary-output ul {
+        margin-left: 20px;
+        list-style-type: disc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product-page">
+      <!-- Image Slider Section -->
+      <div class="image-slider">
+        <div class="slider-container">
+          <img
+            id="productImage"
+            src="images/mosquito_bat.jpg"
+            alt="Product Image"
+          />
+          <!-- Navigation Buttons -->
+          <button class="prev" onclick="prevImage()">❮</button>
+          <button class="next" onclick="nextImage()">❯</button>
+          <div class="summarize-container">
+            <button
+              class="summarize-button"
+              onclick="generateSummary('mosquito_bat')"
+            >
+              Generate Summarized Review
+            </button>
+            <div class="summary-output" id="summaryOutput">
+              <!-- The summarized review will be displayed here -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product Info Section -->
+      <div class="product-info">
+        <div class="product-title">
+          Weird Wolf Heavy Duty Mosquito Racket Bat | Rechargeable Electric Fly
+          Swatter | Mosquito Killer Racquet with Type-C Charging and 6 Months
+          Warranty (Maroon)
+        </div>
+        <div class="product-description">
+          <div class="description-title">About this item:</div>
+          <ul>
+            <li>
+              Rechargeable Battery For Long Power Backup - 1200 milliampere hour
+              rechargeable battery with up to 1 month of Standby.
+            </li>
+            <li>
+              Circuit delivers strong voltage on mesh, suitable for zapping
+              small insects like flies, mosquitoes.
+            </li>
+            <li>
+              Type-C Charging - Very Easy and Convenient Way For Charging The
+              Racket.
+            </li>
+            <li>
+              Made from Aircraft Grade ABS Plastic for high durability and long
+              life.
+            </li>
+            <li>
+              6 Month Warranty Period - Hassle-Free Registration and Claim
+              Process.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // JavaScript for image slider functionality
+      let currentImageIndex = 0;
+      const images = [
+        "images/mosquito_bat.jpg",
+        "images/mosquito_bat_2.jpg", // Add more image paths as needed
+        "images/mosquito_bat_3.jpg",
+      ];
+
+      const imageElement = document.getElementById("productImage");
+
+      function nextImage() {
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+        imageElement.src = images[currentImageIndex];
+      }
+
+      function prevImage() {
+        currentImageIndex =
+          (currentImageIndex - 1 + images.length) % images.length;
+        imageElement.src = images[currentImageIndex];
+      }
+      async function generateSummary(productId) {
+        try {
+          const response = await fetch(
+            `http://localhost:3000/generate-summary/${productId}`,
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({}), // Empty body as server has predefined reviews
+            }
+          );
+
+          if (response.ok) {
+            const data = await response.json();
+            const formattedSummary = formatSummary(data.summary);
+            document.getElementById("summaryOutput").innerHTML =
+              formattedSummary;
+          } else {
+            const errorData = await response.json();
+            alert("Error: " + errorData.error);
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("There was an error while generating the summary.");
+        }
+      }
+
+      function formatSummary(summary) {
+        // Convert '**' to '<b>' for bold formatting
+        let formatted = summary.replace(/\*\*(.*?)\*\*/g, "<b>$1</b>");
+
+        // Convert line breaks to <br>
+        formatted = formatted.replace(/\n/g, "<br>");
+
+        // Convert list items (starting with '- ') into <li>
+        formatted = formatted.replace(/- /g, "<li>");
+
+        // Wrap 'Pros:' and 'Cons:' in bold tags for consistency
+        formatted = formatted.replace(/Pros:/g, "<b>Pros:</b>");
+        formatted = formatted.replace(/Cons:/g, "<b>Cons:</b>");
+
+        return formatted;
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+    />
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+    <df-messenger
+      project-id="stoked-cosine-444912-f3"
+      agent-id="21cb14ea-366a-4f81-b57a-3f5646a8cbe5"
+      language-code="en"
+      max-query-length="-1"
+    >
+      <df-messenger-chat-bubble chat-title="mosquito_bat1">
+      </df-messenger-chat-bubble>
+    </df-messenger>
+    <style>
+      df-messenger {
+        z-index: 999;
+        position: fixed;
+        --df-messenger-font-color: #000;
+        --df-messenger-font-family: Google Sans;
+        --df-messenger-chat-background: #f3f6fc;
+        --df-messenger-message-user-background: #d3e3fd;
+        --df-messenger-message-bot-background: #fff;
+        bottom: 16px;
+        right: 16px;
+      }
+    </style>
+  </body>
+</html>

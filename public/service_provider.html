@@ -1,0 +1,236 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page</title>
+    <style>
+      body {
+        background-image: url("images/ind.jpg");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+
+      .products-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .product {
+        width: 200px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px; /* Fixed height to ensure consistent layout */
+      }
+
+      .product:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .product img:hover {
+        transform: scale(1.1);
+      }
+
+      .product-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        flex-grow: 1; /* Ensures the title takes up remaining space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 80px; /* Fixed height for title alignment */
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .product-title:hover {
+        color: #007bff;
+      }
+
+      /* Optional: styling anchor tags to remove default link styles */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="products-container">
+      <div class="product">
+        <a href="mosquito_bat.html">
+          <img src="images/mosquito_bat.jpg" alt="Product 1" />
+          <div class="product-title">
+            Weird Wolf Heavy Duty Mosquito Racket Bat | Rechargeable Electric
+            Fly Swatter | Mosquito Killer Racquet with Type-C Charging and 6
+            Months Warranty (Maroon)
+          </div>
+        </a>
+      </div>
+      <div class="product">
+        <a href="carvan1.html">
+          <img src="images/carvan.jpg" alt="Product 2" />
+          <div class="product-title" style="margin-top: 50px">
+            Carvaan Saregama Mini+ (Plus) Portable Music Player with 1000
+            Preloaded Songs, 10 Watt Speaker, Handsfree Calling,
+            Bluetooth/Fm/Am/Aux
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Products Page</title>
+    <style>
+      body {
+        background-image: url("images/ind.jpg");
+        background-size: cover;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f4f4f4;
+      }
+      .title-container {
+        text-align: center;
+        margin-bottom: 30px; /* Space below the title */
+      }
+
+      .app-title {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #333;
+        margin-bottom: 10px; /* Space below the main title */
+      }
+      .app-subtitle {
+        font-size: 1.2em;
+        color: #555;
+      }
+
+      .products-container {
+        display: flex;
+        gap: 20px;
+      }
+
+      .product {
+        width: 200px;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s, box-shadow 0.2s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 400px; /* Fixed height to ensure consistent layout */
+      }
+
+      .product:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+      }
+
+      .product img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        transition: transform 0.2s;
+      }
+
+      .product img:hover {
+        transform: scale(1.1);
+      }
+
+      .product-title {
+        font-size: 14px;
+        font-weight: bold;
+        color: #333;
+        flex-grow: 1; /* Ensures the title takes up remaining space */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        min-height: 80px; /* Fixed height for title alignment */
+        cursor: pointer;
+        transition: color 0.2s;
+      }
+
+      .product-title:hover {
+        color: #007bff;
+      }
+
+      /* Optional: styling anchor tags to remove default link styles */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1 class="app-title">Browse Products</h1>
+      <p class="app-subtitle">Click on the image to see suggestions</p>
+    </div>
+    <div class="products-container">
+      <div class="product">
+        <a href="mosquito_bat.html?userType=service-provider">
+          <img src="images/mosquito_bat.jpg" alt="Product 1" />
+          <div class="product-title">
+            Weird Wolf Heavy Duty Mosquito Racket Bat | Rechargeable Electric
+            Fly Swatter | Mosquito Killer Racquet with Type-C Charging and 6
+            Months Warranty (Maroon)
+          </div>
+        </a>
+      </div>
+      <div class="product">
+        <a href="carvan1.html">
+          <img src="images/carvan.jpg" alt="Product 2" />
+          <div class="product-title" style="margin-top: 50px">
+            Carvaan Saregama Mini+ (Plus) Portable Music Player with 1000
+            Preloaded Songs, 10 Watt Speaker, Handsfree Calling,
+            Bluetooth/Fm/Am/Aux
+          </div>
+        </a>
+      </div>
+    </div>
+  </body>
+</html>

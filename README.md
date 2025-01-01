@@ -22,7 +22,6 @@ This project is a web application that uses GenAI to summarize customer reviews 
 -   Node.js
 -   Express.js
 -   Google Cloud Vertex AI API
- -   TensorFlow.js (or similar) for LSTM Model
 -   HTML
 -   CSS
 -   JavaScript

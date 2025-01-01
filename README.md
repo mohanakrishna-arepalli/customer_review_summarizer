@@ -2,6 +2,8 @@
 
 This project is a web application that uses GenAI to summarize customer reviews and provide product improvement suggestions. It also incorporates an LSTM model to filter out potentially fake reviews, ensuring more reliable insights. It allows users to browse products and, based on their role (customer or service provider), interact with AI-generated content.
 
+**LSTM Model GitHub Link:** [https://github.com/mohanakrishna-arepalli/fake_product_review_detection](https://github.com/mohanakrishna-arepalli/fake_product_review_detection)
+
 ## Features
 
 -   **Role-Based Access:** Users can choose between "Customer" and "Service Provider" roles.
@@ -12,7 +14,6 @@ This project is a web application that uses GenAI to summarize customer reviews 
     -   Utilizes an LSTM model to identify and filter out potentially fake reviews, ensuring that only genuine feedback is sent to Gemini API.
 -   **AI-Powered Suggestions:**
     -   Service providers can generate suggestions for product improvement.
--   **Dynamic Content:** The interface adapts based on the user's role.
 -   **Backend:** Node.js server with Express.js for API endpoints and server-side processing.
 -   **Frontend:** HTML, CSS, and JavaScript for the user interface.
 
@@ -21,6 +22,7 @@ This project is a web application that uses GenAI to summarize customer reviews 
 -   Node.js
 -   Express.js
 -   Google Cloud Vertex AI API
+ -   TensorFlow.js (or similar) for LSTM Model
 -   HTML
 -   CSS
 -   JavaScript
